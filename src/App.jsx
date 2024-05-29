@@ -18,9 +18,6 @@ function App() {
     setBoard(newBoard);
     const newTurn = turn == TURNS.X  ? TURNS.O : TURNS.X
     setTurn(newTurn);
-    //guardamos partida
-    window.localStorage.setItem('board', board.stringify(newBoard))
-    window.localStorage.setItem('turn', turn)
 
     const newWinner = checkWinner(newBoard)
     if(newWinner){
